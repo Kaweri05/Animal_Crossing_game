@@ -39,3 +39,10 @@ if st.button('Predict Sell Category'):
 
 st.write('---')
 st.write('**Note:** This is a simplified predictor based on Buy Price and Item Type.')
+import pickle
+
+with open("preprocessor.pkl", "rb") as file:
+    preprocessor = pickle.load(file)
+
+with open("model.pkl", "rb") as file:
+    model = pickle.load(file)
